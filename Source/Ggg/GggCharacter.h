@@ -5,7 +5,7 @@
 #include "GggCharacter.generated.h"
 
 class USpringArmComponent;
-class UCameraComponent;
+class UCameraComponent;\nclass UGggCombatComponent;\nclass UGggInventoryComponent;
 
 UCLASS()
 class AGggCharacter : public ACharacter
@@ -26,5 +26,5 @@ protected:
     TObjectPtr<USpringArmComponent> CameraBoom;
 
     UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Camera")
-    TObjectPtr<UCameraComponent> FollowCamera;
+    TObjectPtr<UCameraComponent> FollowCamera;\n\n    UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category="Gameplay")\n    TObjectPtr<UGggCombatComponent> CombatComponent;\n\n    UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category="Gameplay")\n    TObjectPtr<UGggInventoryComponent> InventoryComponent;\n\n    void Attack();
 };
