@@ -7,7 +7,7 @@ A C++ starter project for a planned PC + Android open-world MMORPG.
 - Unreal Engine project descriptor: `Ggg.uproject` (configured for UE 5.4)
 - C++ game module and editor/game target files
 - Third-person character with camera boom, camera, walking, turning and jumping
-- Default keyboard/mouse input mappings
+- Default keyboard/mouse input mappings\n- Server-side melee attack trace (left mouse) and replicated enemy health scaffold\n- Replicated inventory item stacks with server-side add/remove functions
 - Basic GameMode that spawns the starter character
 - Git ignore rules and project roadmap/architecture notes
 
