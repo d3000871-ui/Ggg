@@ -1,6 +1,7 @@
 #include "GggCharacter.h"
 #include "Camera/CameraComponent.h"
 #include "GameFramework/SpringArmComponent.h"
+#include "GameFramework/CharacterMovementComponent.h"
 #include "Components/InputComponent.h"
 
 AGggCharacter::AGggCharacter()
