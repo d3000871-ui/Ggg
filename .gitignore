@@ -1,0 +1,16 @@
+# Unreal Engine generated files
+Binaries/
+DerivedDataCache/
+Intermediate/
+Saved/
+.vs/
+.vscode/
+*.sln
+*.suo
+*.VC.db
+*.opensdf
+*.sdf
+*.VC.opendb
+# Build outputs
+Build/
+# Keep source assets and Config; use Git LFS for large binary assets.
