@@ -2,6 +2,7 @@
 #include "GameFramework/Actor.h"
 #include "GameFramework/Controller.h"
 #include "Engine/World.h"
+#include "Kismet/GameplayStatics.h"
 #include "DrawDebugHelpers.h"
 
 UGggCombatComponent::UGggCombatComponent()
