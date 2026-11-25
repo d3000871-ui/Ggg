@@ -1,4 +1,5 @@
 #include "GggInventoryComponent.h"
+#include "GameFramework/Actor.h"
 #include "Net/UnrealNetwork.h"
 
 UGggInventoryComponent::UGggInventoryComponent()
