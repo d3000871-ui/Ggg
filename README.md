@@ -1,22 +1,31 @@
-# Ggg — MMORPG Project
+# Ggg — Unreal Engine 5 MMORPG Starter
 
-Starter repository for a PC and Android open-world MMORPG prototype using Unreal Engine 5.
+A C++ starter project for a planned PC + Android open-world MMORPG.
 
-## Planned systems
-- Third-person character movement
-- Open-world exploration
-- Combat and equipment
-- Inventory and items
-- Enemies and NPCs
-- Multiplayer foundations
-- Account and persistence services
+## Included in this repository
 
-## Roadmap
-1. Set up the Unreal Engine 5 C++ project.
-2. Implement the player character and camera.
-3. Build a small playable test area.
-4. Add combat, inventory, and AI.
-5. Add dedicated-server multiplayer and persistent backend services.
-6. Optimize and load-test PC and Android builds.
+- Unreal Engine project descriptor: `Ggg.uproject` (configured for UE 5.4)
+- C++ game module and editor/game target files
+- Third-person character with camera boom, camera, walking, turning and jumping
+- Default keyboard/mouse input mappings
+- Basic GameMode that spawns the starter character
+- Git ignore rules and project roadmap/architecture notes
 
-This is a starter plan, not a finished MMORPG. Supporting 100–1000+ concurrent players requires dedicated servers, backend engineering, optimization, and load testing.
+## Open the project
+
+1. Install Unreal Engine 5.4 and the matching C++ build tools.
+2. Download or clone this repository to your computer.
+3. Double-click `Ggg.uproject`; allow Unreal to generate project files if prompted.
+4. Build the `GggEditor` target in your IDE, then open the project.
+5. Create a level in Unreal Editor, add a PlayerStart, and save it under `Content/`.
+6. Press Play. The starter pawn uses WASD, mouse look and Space to jump.
+
+## Current status
+
+This is a code scaffold, **not a complete playable MMORPG**. It does not yet include finished 3D character art, animations, an open-world map, combat, inventory, quests, NPC content, login service, database, matchmaking or dedicated multiplayer servers. Those systems must be implemented and tested in later milestones.
+
+A goal of 100–1000+ concurrent players requires authoritative dedicated servers, backend services, persistence, security, monitoring and staged load testing. It is not provided automatically by this starter project.
+
+## Next milestones
+
+See [Docs/ROADMAP.md](Docs/ROADMAP.md) and [Docs/ARCHITECTURE.md](Docs/ARCHITECTURE.md). Use Git LFS for large Unreal binary assets when they are added. Never commit passwords, API keys or production secrets.
