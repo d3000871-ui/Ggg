@@ -1,0 +1,10 @@
+{
+  "FileVersion": 3,
+  "EngineAssociation": "5.4",
+  "Category": "Games",
+  "Description": "Open-world MMORPG prototype for PC and Android",
+  "Modules": [
+    { "Name": "Ggg", "Type": "Runtime", "LoadingPhase": "Default" }
+  ],
+  "TargetPlatforms": [ "Windows", "Android" ]
+}
