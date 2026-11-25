@@ -1,4 +1,4 @@
-#include "GggCharacter.h"
+#include "GggCharacter.h"\n#include "GggCombatComponent.h"\n#include "GggInventoryComponent.h"
 #include "Camera/CameraComponent.h"
 #include "GameFramework/SpringArmComponent.h"
 #include "GameFramework/CharacterMovementComponent.h"
@@ -6,7 +6,7 @@
 
 AGggCharacter::AGggCharacter()
 {
-    PrimaryActorTick.bCanEverTick = true;
+    PrimaryActorTick.bCanEverTick = true;\n    bReplicates = true;\n    CombatComponent = CreateDefaultSubobject<UGggCombatComponent>(TEXT("CombatComponent"));\n    InventoryComponent = CreateDefaultSubobject<UGggInventoryComponent>(TEXT("InventoryComponent"));
     bUseControllerRotationPitch = false;
     bUseControllerRotationYaw = false;
     bUseControllerRotationRoll = false;
@@ -35,7 +35,7 @@ void AGggCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputCompon
     PlayerInputComponent->BindAxis(TEXT("Turn"), this, &AGggCharacter::Turn);
     PlayerInputComponent->BindAxis(TEXT("LookUp"), this, &AGggCharacter::LookUp);
     PlayerInputComponent->BindAction(TEXT("Jump"), IE_Pressed, this, &ACharacter::Jump);
-    PlayerInputComponent->BindAction(TEXT("Jump"), IE_Released, this, &ACharacter::StopJumping);
+    PlayerInputComponent->BindAction(TEXT("Jump"), IE_Released, this, &ACharacter::StopJumping);\n    PlayerInputComponent->BindAction(TEXT("Attack"), IE_Pressed, this, &AGggCharacter::Attack);
 }
 
 void AGggCharacter::MoveForward(float Value)
@@ -56,5 +56,5 @@ void AGggCharacter::MoveRight(float Value)
     }
 }
 
-void AGggCharacter::Turn(float Value) { AddControllerYawInput(Value); }
+void AGggCharacter::Attack()\n{\n    if (CombatComponent) CombatComponent->PerformAttack();\n}\n\nvoid AGggCharacter::Turn(float Value) { AddControllerYawInput(Value); }
 void AGggCharacter::LookUp(float Value) { AddControllerPitchInput(Value); }
