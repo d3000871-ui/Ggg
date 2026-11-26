@@ -1,0 +1,2 @@
+# World prototype setup
+Create an Open World level in UE 5.4, enable World Partition, save the level and select it in Project Settings > Maps & Modes. Add PlayerStart, landscape, navigation mesh bounds, enemy Blueprint instances, lighting and collision. Assign licensed meshes and animation assets. For Android use a separate scalability profile, simplified meshes and materials, and test on physical devices. No binary map or art is included.
